@@ -1,0 +1,26 @@
+﻿l_english:
+################################################################################################
+# Edicts
+################################################################################################
+ edict_EE_recruit_enclave:0 "Recruit Enclave Outcasts"
+ edict_EE_recruit_enclave_desc:0 "Every society has its rejects, Let us scoop up some of the more talented people from the enclaves to aid in our knowledge.\n\n§YUnlocks new edicts based on what Enclaves you already have encountered.§!"
+ edict_EE_curator:0 "Curator Insight"
+ edict_EE_curator_desc:0 "The Curator order always has had an uncanny ability to enhance and push technology in unique ways. Lets add them to the payroll."
+ edict_EE_artisan:0 "Artists Inspiration"
+ edict_EE_artisan_desc:0 "Most agree that art is subjective, even so with artists like these all can agree it grants us inspiration."
+ edict_EE_trader_gas:0 "Xuracorp Expertise"
+ edict_EE_trader_gas_desc:0 "Xuracorp has always had secret manufactoring abilities related to there exotic gas. Now we do too."
+ edict_EE_trader_crystal:0 "Muutagan Expertise"
+ edict_EE_trader_crystal_desc:0 "The Muutagans always seems to get a hold of those rare crystals at suprising speed. Now we understand why."
+ edict_EE_trader_motes:0 "Riggan Expertise"
+ edict_EE_trader_motes_desc:0 "The Riggans seemed always a little to well versed into there produce for regular traders. Seems our suspicion was correct."
+ edict_EE_salvagers_construction:0 "Salvagers Construction Expertise"
+ edict_EE_salvagers_construction_desc:0 "The Salvagers truly are a resourcefull bunch, able to recycle just about anything with great speed."
+ edict_EE_salvagers_science:0 "Salvagers Engineering Expertise"
+ edict_EE_salvagers_science_desc:0 "Salvagers know most of the machines in the galaxy by instinct, simply because they have been tearing them open since brith."
+ edict_EE_shroudwalkers:0 "Shroudwalkers Insight"
+ edict_EE_shroudwalkers_desc:0 "The Shroudwalkers are an odd bunch, rarely sharing there secrets. But our search was not fruitless."
+
+################################################################################################
+# Placeholder
+################################################################################################

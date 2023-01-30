@@ -1,0 +1,82 @@
+namespace = EE_effect
+country_event = {
+	is_triggered_only = yes
+	hide_window = yes
+	id = EE_effect.1
+	immediate = {
+		while = {
+			# Will keep looping to make sure all are either set or false.
+			count = 7
+			# Curator
+			if = {
+				limit = {
+					has_communications = event_target:curator_enclave_country
+					NOT = {
+						has_country_flag = EE_curator_defects
+					}
+				}
+				set_country_flag = EE_curator_defects
+			}
+			# Artists
+			else_if = {
+				limit = {
+					has_communications = event_target:artist_enclave_country
+					NOT = {
+						has_country_flag = EE_artist_defects
+					}
+				}
+				set_country_flag = EE_artist_defects
+			}
+			# Trader Xura (Gas)
+			else_if = {
+				limit = {
+					has_communications = event_target:xuracorp_country
+					NOT = {
+						has_country_flag = EE_trader_defects_xura
+					}
+				}
+				set_country_flag = EE_trader_defects_xura
+			}
+			# Trader Muutagan (Crystal)
+			else_if = {
+				limit = {
+					has_communications = event_target:muutagan_country
+					NOT = {
+						has_country_flag = EE_trader_defects_muutagan
+					}
+				}
+				set_country_flag = EE_trader_defects_muutagan
+			}
+			# Trader Riggan (Motes)
+			else_if = {
+				limit = {
+					has_communications = event_target:riggan_country
+					NOT = {
+						has_country_flag = EE_trader_defects_riggan
+					}
+				}
+				set_country_flag = EE_trader_defects_riggan
+			}
+			# Salvagers
+			else_if = {
+				limit = {
+					has_communications = event_target:salvager_enclave_country
+					NOT = {
+						has_country_flag = EE_salvager_defect
+					}
+				}
+				set_country_flag = EE_salvager_defect
+			}
+			# Shroud Walkers
+			else_if = {
+				limit = {
+					has_communications = event_target:shroudwalker_enclave_country
+					NOT = {
+						has_country_flag = EE_shroud_walker_defect
+					}
+				}
+				set_country_flag = EE_shroud_walker_defect
+			}
+		}
+	}
+}

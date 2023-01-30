@@ -1,0 +1,9 @@
+# Had to calculate the bloody exact energy needed that every pop added.
+# For reference 60 pops mean a 1k energy cost for 10 years.
+# With a ceiling for 300 pops meaning 5k cost for 10 years.
+EE_edict_pop_count_effect = {
+	base = 1
+	mult = trigger:num_pops
+	add = 1
+	max = 301
+}

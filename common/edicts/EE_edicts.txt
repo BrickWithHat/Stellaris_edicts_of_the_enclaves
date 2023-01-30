@@ -1,0 +1,235 @@
+################################################################################################
+# Edicts
+################################################################################################
+# For the motive to see why the odd energy count see the file EE_script_values.txt
+@EE_EdictPerpetual = -1
+
+EE_recruit_enclave = {
+	length = 0
+	icon = "GFX_edict_type_policy"
+	potential = {
+		OR = {
+			host_has_dlc = "Leviathans Story Pack"
+			host_has_dlc = "Distant Stars Story Pack"
+			host_has_dlc = Overlord
+		}
+		
+	}
+	resources = {
+		category = edicts
+	}
+	effect = {
+		hidden_effect = {
+			country_event = {
+				id = EE_effect.1
+			}
+		}
+	}
+}
+
+EE_curator = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_curator_defects
+	}
+	allow = {
+		NOT = {
+			has_modifier = curator_insight
+		}
+	}
+	modifier = {
+		all_technology_research_speed = 0.1
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+EE_artisan = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_artist_defects
+	}
+	allow = {
+		NOT = {
+			has_modifier = enclave_artist_patron
+		}
+	}
+	modifier = {
+		country_unity_produces_mult = 0.1
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+# Xura
+EE_trader_gas = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_trader_defects_xura
+	}
+	allow = {
+		NOT = {
+			has_modifier = enclave_trade_1_xur
+			has_modifier = enclave_trade_2_xur
+			has_modifier = enclave_trade_3_xur
+			has_modifier = enclave_trade_4_xur
+			has_modifier = enclave_trade_5_xur
+		}
+	}
+	modifier = {
+		country_exotic_gases_produces_mult = 0.1
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+# Muutagan
+EE_trader_crystal = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_trader_defects_muutagan
+	}
+	allow = {
+		NOT = {
+			has_modifier = enclave_trade_1_mut
+			has_modifier = enclave_trade_2_mut
+			has_modifier = enclave_trade_3_mut
+			has_modifier = enclave_trade_4_mut
+			has_modifier = enclave_trade_5_mut
+		}
+	}
+	modifier = {
+		country_rare_crystals_produces_mult = 0.1
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+# Riggan
+EE_trader_motes = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_trader_defects_riggan
+	}
+	allow = {
+		NOT = {
+			has_modifier = enclave_trade_1_rig
+			has_modifier = enclave_trade_2_rig
+			has_modifier = enclave_trade_3_rig
+			has_modifier = enclave_trade_4_rig
+			has_modifier = enclave_trade_5_rig
+		}
+	}
+	modifier = {
+		country_volatile_motes_produces_mult = 0.1
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+EE_salvagers_construction = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_salvager_defect
+	}
+	allow = {
+		NOT = {
+			has_modifier = salvager_overdrive
+		}
+	}
+	modifier = {
+		starbase_shipyard_build_speed_mult = 0.1
+		starbase_building_build_speed_mult = 0.4
+		starbase_module_build_speed_mult = 0.4
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+EE_salvagers_science = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_salvager_defect
+	}
+	allow = {
+		NOT = {
+			has_modifier = salvager_insight
+		}
+	}
+	modifier = {
+		country_engineering_tech_research_speed = 0.15
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
+
+EE_shroudwalkers = {
+	length = @EE_EdictPerpetual
+	icon = "GFX_edict_type_policy"
+	potential = {
+		has_country_flag = EE_shroud_walker_defect
+	}
+	allow = {
+		NOT = {
+			any_situation = {
+				is_situation_type = shroudwalker_spy_network
+				is_situation_type = divination_locus
+				is_situation_type = divination_visitors
+			}
+			
+		}
+	}
+	modifier = {
+		planet_psionic_jobs_produces_mult = 0.1
+		pop_government_ethic_attraction = 0.1
+	}
+	resources = {
+		category = edicts
+		upkeep = {
+			energy = 0.138
+			multiplier = value:EE_edict_pop_count_effect
+		}
+	}
+}
